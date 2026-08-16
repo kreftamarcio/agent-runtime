@@ -1,0 +1,49 @@
+{
+  "name": "@q1-digital/agent-runtime",
+  "version": "0.1.0",
+  "description": "Agent execution runtime with bounded loops, resource budgets, tool sandboxing, execution traces, and cooperative cancellation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src/ --ext .ts",
+    "format": "prettier --write 'src/**/*.ts'",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "ai-agents",
+    "agent-runtime",
+    "loop-detection",
+    "sandboxing",
+    "resource-budgets",
+    "execution-trace",
+    "llm",
+    "typescript"
+  ],
+  "author": "Marcio Krefta <q1digitalfreela@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^3.23.0",
+    "pino": "^9.1.0",
+    "tiktoken": "^1.0.15",
+    "eventemitter3": "^5.0.1",
+    "picomatch": "^4.0.0",
+    "@opentelemetry/api": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.0",
+    "@types/picomatch": "^3.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "tsx": "^4.10.0",
+    "eslint": "^9.3.0",
+    "prettier": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
